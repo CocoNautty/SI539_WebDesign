@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Verdana, sans-serif;
+    font-family: Arial, Verdana;
     background-color: #000000;
     color: #FFFFFF;
     margin: 20px 20px 0 20px;
@@ -40,14 +40,6 @@ div {
     line-height: 2;
 }
 
-.red {
-    background-color: #FF0000;
-    text-align: right;
-    margin-left: 50px;
-    border-bottom: 2px solid;
-    border-left: 5px solid;
-}
-
 h1 {
     font-size: 42px;
     text-align: center;
@@ -87,16 +79,14 @@ div {
     background-color: #FF0000;
     text-align: right;
     margin-left: 50px;
-    border-bottom: 2px solid;
-    border-left: 5px solid;
+    border-width: 0px 0px 2px 5px;
 }
 
 .blue {
     background-color: #0000FF;
     text-align: left;
     margin-right: 50px;
-    border-right: 5px solid;
-    border-top: 2px solid;
+    border-width: 2px 5px 0px 0px;
     color: #C4C4C4;
 }
 
@@ -108,8 +98,7 @@ div {
     background-color: #FFFF00;
     text-align: right;
     margin-left: 50px;
-    border-bottom: 2px solid;
-    border-left: 5px solid;
+    border-width: 0px 0px 2px 5px;
     color: #707070;
 }
 
@@ -117,8 +106,7 @@ div {
     background-color: #008500;
     text-align: left;
     margin-right: 50px;
-    border-right: 5px solid;
-    border-top: 2px solid;
+    border-width: 2px 5px 0px 0px;
 }
 
 footer {
