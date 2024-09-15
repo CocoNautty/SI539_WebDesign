@@ -79,7 +79,7 @@ div {
     background-color: #FF0000;
     text-align: right;
     margin-left: 50px;
-    border: solid;
+    border: solid #FFFFFF;
     border-width: 0px 0px 2px 5px;
 }
 
@@ -87,7 +87,7 @@ div {
     background-color: #0000FF;
     text-align: left;
     margin-right: 50px;
-    border: solid;
+    border: solid #FFFFFF;
     border-width: 2px 5px 0px 0px;
     color: #C4C4C4;
 }
@@ -100,7 +100,7 @@ div {
     background-color: #FFFF00;
     text-align: right;
     margin-left: 50px;
-    border: solid;
+    border: solid #FFFFFF;
     border-width: 0px 0px 2px 5px;
     color: #707070;
 }
@@ -109,7 +109,7 @@ div {
     background-color: #008500;
     text-align: left;
     margin-right: 50px;
-    border: solid;
+    border: solid #FFFFFF;
     border-width: 2px 5px 0px 0px;
 }
 
