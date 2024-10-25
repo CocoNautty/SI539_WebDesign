@@ -1,0 +1,27 @@
+.card {
+    flex-basis: 450px;
+}
+
+.pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (prefers-reduced-motion) {
+    .card {
+        flex-basis: 450px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .pricing {
+        justify-content: space-around;
+    }
+}
+
+@media print and (orientation: portrait) {
+    .pricing {
+        flex-direction: column;
+    }
+}
