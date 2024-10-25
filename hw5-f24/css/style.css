@@ -1,5 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    font-family: 'Poppins', serif;
+    background-image: url('../images/concrete_seamless.png');
+    background-color: #f1f1f1;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+.card > header {
+    background: #288088;
+    border: 2px solid #45ADAD;
+    padding: 20px 0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
 .card {
     flex-basis: 450px;
+    background-color: transparent;
 }
 
 .pricing {
@@ -8,7 +44,7 @@
     justify-content: center;
 }
 
-@media (prefers-reduced-motion) {
+@media all and (prefers-reduced-motion: reduce) {
     .card {
         flex-basis: 450px;
     }
