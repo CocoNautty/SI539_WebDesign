@@ -1,159 +1,183 @@
+/* Importing Google Fonts for the Poppins font family */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+/* Setting the default font and background for the body */
 body {
-    font-family: 'Poppins', serif;
-    background-image: url('../images/concrete_seamless.png');
-    background-color: #f1f1f1;
+    font-family: 'Poppins', serif; /* Using Poppins font */
+    background-image: url('../images/concrete_seamless.png'); /* Background image */
+    background-color: #f1f1f1; /* Fallback background color */
 }
 
+/* Animation keyframes for the logo growth effect */
 @keyframes logoGrow {
     0% {
-        width: 25px;
-        opacity: 0;
+        width: 25px; /* Initial width */
+        opacity: 0; /* Fully transparent */
     }
     100% {
-        width: 475px;
-        opacity: 1;
+        width: 475px; /* Final width */
+        opacity: 1; /* Fully opaque */
     }
-  }
+}
 
+/* Applying the logo growth animation */
 #logo {
-    animation: logoGrow 5s forwards;
-  }
+    animation: logoGrow 5s forwards; /* Animation duration and fill mode */
+}
 
+/* Styling for the header section of the body */
 body > header {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Using Flexbox for layout */
+    flex-direction: column; /* Stacking items vertically */
 }
 
+/* Navigation links styling */
 .nav_links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: blue;
+    display: flex; /* Using Flexbox for layout */
+    flex-direction: column; /* Stacking links vertically */
+    align-items: center; /* Center-aligning links */
+    color: blue; /* Text color */
 }
 
+/* Link color inheritance */
 a {
-    color: inherit;
+    color: inherit; /* Inherit color from parent */
 }
 
 a:visited {
-    color: inherit;
+    color: inherit; /* Maintain color for visited links */
 }
 
+/* Styling for card header */
 .card > header {
-    background: #288088;
-    border: 2px solid #45ADAD;
-    padding: 20px 0;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    background: #288088; /* Header background color */
+    border: 2px solid #45ADAD; /* Border styling */
+    padding: 20px 0; /* Padding for the header */
+    border-top-left-radius: 50px; /* Rounded top-left corner */
+    border-top-right-radius: 50px; /* Rounded top-right corner */
 }
 
+/* Card styling */
 .card {
-    flex-basis: 450px;
-    background-color: white;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    flex-basis: 450px; /* Base width of cards */
+    background-color: white; /* Card background color */
+    border-top-left-radius: 50px; /* Rounded top-left corner */
+    border-top-right-radius: 50px; /* Rounded top-right corner */
 }
 
+/* Pricing section layout */
 .pricing {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Using Flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap onto new lines */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
 }
 
+/* Gallery layout */
 .gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: flex; /* Using Flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap onto new lines */
 }
 
+/* Image styling within the gallery */
 .gallery > img {
-    box-sizing: border-box;
-    border: 10px solid #50C7C7;
-    margin: 10px;
-    width: 300px;
-    height: auto;
+    box-sizing: border-box; /* Include padding and border in width/height */
+    border: 10px solid #50C7C7; /* Border around images */
+    margin: 10px; /* Margin around images */
+    width: 300px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
 }
 
+/* Media query for reduced motion preference */
 @media all and (prefers-reduced-motion: reduce) {
     #logo {
-        animation: none;
-        width: 475px;
-        opacity: 1;
+        animation: none; /* Disable animation */
+        width: 475px; /* Set width directly */
+        opacity: 1; /* Ensure full opacity */
     }
 }
 
+/* Media query for screens wider than 900px */
 @media screen and (min-width: 900px) {
     main {
-        margin-top: 100px;
+        margin-top: 100px; /* Margin for main content */
     }
 
+    /* Header layout for larger screens */
     body > header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
+        flex-direction: row; /* Align items horizontally */
+        justify-content: space-between; /* Space between items */
+        align-items: center; /* Center align items */
+        position: fixed; /* Fix header position */
+        top: 0; /* Position at the top */
+        width: 100%; /* Full width */
+        z-index: 1000; /* Ensure it is above other content */
     }
 
+    /* Navigation links layout for larger screens */
     .nav_links {
-        flex-direction: row;
-        justify-content: flex-end;
+        flex-direction: row; /* Align links horizontally */
+        justify-content: flex-end; /* Align to the right */
     }
 
+    /* Card flex-basis adjustment for larger screens */
     .card {
-        flex-basis: 275px;
+        flex-basis: 275px; /* Smaller width for cards */
     }
 }
 
-@media print{
+/* Print media query */
+@media print {
     body {
-        font-family: Arial, Helvetica;
-        background-image: none;
-        font-size: x-large;
+        font-family: Arial, Helvetica; /* Change font for print */
+        background-image: none; /* Remove background image */
     }
 
+    /* Header layout adjustments for print */
     body > header {
-        align-items: center;
-        justify-content: center;
+        align-items: center; /* Center items */
+        justify-content: center; /* Center content */
     }
 
+    /* Navigation links layout for print */
     .nav_links {
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: row; /* Align links horizontally */
+        justify-content: space-around; /* Space links evenly */
     }
 
+    /* Logo adjustments for print */
     #logo {
-        animation: none;
-        width: 475px;
-        opacity: 1;
-        margin: auto;
+        animation: none; /* Disable animation */
+        width: 475px; /* Set width directly */
+        opacity: 1; /* Ensure full opacity */
+        margin: auto; /* Center logo */
     }
 
+    /* Pricing layout for print */
     .pricing {
-        flex-direction: row;
-        align-items: flex-end;
+        flex-direction: row; /* Align items in a row */
+        align-items: flex-end; /* Align items to the end */
     }
 
+    /* Card styling adjustments for print */
     .card {
-        border: 2px solid #45ADDD;
-        flex-basis: 325px;
-        position: relative;
+        border: 2px solid #45ADDD; /* Change border color */
+        flex-basis: 325px; /* Adjust card width */
+        position: relative; /* Set position */
     }
 
+    /* Adding thumbs up emoji after the second list item in cards */
     .card > ul > li:nth-child(2)::after {
-        content: "\1F44D";
+        content: "\1F44D"; /* Thumbs up emoji */
     }
 
+    /* Hiding the gallery for print */
     .gallery {
-        display: none;
+        display: none; /* Hide gallery */
     }
 
     #gallery {
-        display: none;
+        display: none; /* Also hide any element with ID gallery */
     }
 }
