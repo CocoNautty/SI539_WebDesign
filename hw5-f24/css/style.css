@@ -6,7 +6,22 @@ body {
     background-color: #f1f1f1;
 }
 
-header {
+@keyframes logoGrow {
+    0% {
+        width: 25px;
+        opacity: 0;
+    }
+    100% {
+        width: 475px;
+        opacity: 1;
+    }
+  }
+
+#logo {
+    animation: logoGrow 5s forwards;
+  }
+
+body > header {
     display: flex;
     flex-direction: column;
 }
@@ -15,6 +30,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: blue;
 }
 
 a {
@@ -35,29 +51,109 @@ a:visited {
 
 .card {
     flex-basis: 450px;
-    background-color: transparent;
+    background-color: white;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 .pricing {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery > img {
+    box-sizing: border-box;
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+    height: auto;
 }
 
 @media all and (prefers-reduced-motion: reduce) {
-    .card {
-        flex-basis: 450px;
+    #logo {
+        animation: none;
+        width: 475px;
+        opacity: 1;
     }
 }
 
 @media screen and (min-width: 900px) {
-    .pricing {
-        justify-content: space-around;
+    main {
+        margin-top: 100px;
+    }
+
+    body > header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .nav_links {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .card {
+        flex-basis: 275px;
     }
 }
 
-@media print and (orientation: portrait) {
+@media print{
+    body {
+        font-family: Arial, Helvetica;
+        background-image: none;
+        font-size: xx-large;
+    }
+
+    body > header {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav_links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #logo {
+        animation: none;
+        width: 475px;
+        opacity: 1;
+        margin: auto;
+    }
+
     .pricing {
-        flex-direction: column;
+        flex-direction: row;
+        align-items: flex-end; 
+    }
+
+    .card {
+        border: 2px solid #45ADDD;
+        flex-basis: 325px;
+        position: relative;
+    }
+
+    .card > ul > li:nth-child(2)::after {
+        content: "\1F44D";
+    }
+
+    .gallery {
+        display: none;
+    }
+
+    #gallery {
+        display: none;
     }
 }
